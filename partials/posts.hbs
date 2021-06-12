@@ -1,29 +1,30 @@
 {{#foreach posts}}
 
-<article class="{{post_class}} card" style="margin-bottom: 20px;">
-    <div class="card-body">
-        {{!-- Displays the featured image if exists --}}
+<div class="{{post_class}} col">
+    <div class="card h-100">
         {{#if feature_image}}
-        <figure>
-            <img src="{{img_url feature_image}}" alt="{{title}}" class="img-fluid"/>
-        </figure>
+        <img src="{{img_url feature_image}}" class="card-img-top" alt="{{title}}">
         {{/if}}
         {{#if primary_tag}}
         <span class="badge badge-success">{{primary_tag.name}}</span>
         {{/if}}
-        <a style="text-decoration-line: none;" href="{{url}}">
-            <h2>{{title}}</h2>
-        </a>
-        <p>{{excerpt words="33"}}</p>
-
-
-        <div>
-
-            <span class="reading-time">{{reading_time}}</span>
-            <span> - Published: {{date published_at timeago="true"}}</span>
+        <div class="card-body">
+            <h5 class="card-title">
+                <a style="text-decoration-line: none;" href="{{url}}">{{title}}</a>
+            </h5>
+            <p class="card-text">{{excerpt words="33"}}</p>
         </div>
-
-    </div>{{!--/.post-card-content--}}
-</article>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col">
+                    <small>{{date published_at timeago="true"}}</small>
+                </div>
+                <div class="col text-end">
+                    <small class="reading-time">{{reading_time}}</small>
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>
 
 {{/foreach}}
