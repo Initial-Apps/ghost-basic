@@ -1,20 +1,66 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-    <a class="navbar-brand" href="#">
-        <img src="{{@site.logo}}" alt="{{@site.title}}" style="height: 30px; max-width: 150px;">
-    </a>
-    <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
-    <div class="collapse navbar-collapse" id="collapsibleNavId">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            {{#foreach navigation}}
-            <li class="nav-item active">
-                <a class="nav-item nav-link {{#if current}}active{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
-            </li>
-            {{/foreach}}
-        </ul>
-        <div class="my-2 my-lg-0">
-            <span data-toggle="modal" data-target="#modelId" class="fa fa-search"
-                style="color: white; font-size: 25px;"></span>
+<!-- Navigation -->
+<nav id="top-navbar" class="navbar navbar-expand-lg navbar-custom fixed-top p-0">
+    <div class="container">
+        <a class="navbar-brand" href="#page-top">
+            <img src="{{@site.logo}}" onerror="this.style.display='none'; this.parentNode.prepend('{{@site.title}}')" style="height: 30px; max-width: 150px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-main-collapse" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse navbar-main-collapse">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden nav-item">
+                    <a class="nav-link" href="#page-top"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-phone" aria-hidden="true"></i> (805) 588-6559</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-block d-sm-none" href="https://orders.sendcnc.com/3d-tek-cnc/login" class="hidden-sm hidden-md hidden-lg">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-button" href="https://orders.sendcnc.com/3d-tek-cnc/upload" class="nav-button">Request A Quote</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<nav class="navbar navbar-custom-sub navbar-expand-lg">
+    <div class="container">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-sub-collapse">
+            <ul class="navbar-nav ms-auto">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden"> <a href="#page-top"></a> </li>
+                <li class="nav-item"> 
+                    <a class="page-scroll nav-link" href="#about">About Us</a> 
+                </li>
+                <li class="nav-item"> 
+                    <a class="page-scroll nav-link" href="#capabilities">Our Capabilities</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="page-scroll nav-link" href="#testimonials">Our Values</a> 
+                </li>
+                <li class="nav-item"> 
+                    <a class="page-scroll nav-link" href="#services">Our Services</a> 
+                </li>
+                <li class="nav-item"> 
+                    <a class="page-scroll nav-link" href="#facilities">Our Facilities</a> 
+                </li>
+                <li class="nav-item"> 
+                    <a class="page-scroll nav-link" href="#contact">Contact Us</a> 
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" href="https://orders.sendcnc.com/3d-tek-cnc/login">Login</a>
+                </li>
+                {{!--#foreach navigation}}
+                <li class="nav-item active">
+                    <a class="nav-item nav-link {{#if current}}active{{/if}}" href="{{url absolute="true"}}">{{label}}</a>
+                </li>
+                {{/foreach--}}
+            </ul>
         </div>
     </div>
 </nav>
