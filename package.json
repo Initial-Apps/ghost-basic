@@ -1,12 +1,12 @@
 {
   "name": "ghost-basic",
-  "description": "A custom ghost theme",
-  "version": "0.0.1",
+  "description": "A custom minimal ghost theme for customization",
+  "version": "0.0.2",
   "engines": {
     "ghost-api": "v4"
   },
   "license": "MIT",
-  "author": "Geekinsta <me@example.com>",
+  "author": "Andrew Akagawa <andrewakagawa@initialapps.com>",
   "config": {
     "posts_per_page": 5,
     "image_sizes": {}
