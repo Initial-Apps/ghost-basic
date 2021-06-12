@@ -213,6 +213,10 @@ nav .navbar-toggle {
 	outline: 0;
 }
 
+.navbar-custom-sub .navbar-nav > li > a:hover, .navbar-custom-sub .navbar-nav > li > a:focus {
+    text-decoration: none;
+    background-color: #eee;
+}
 
 @media only screen and (max-width:768px){
 	.navbar-custom .navbar-brand {
@@ -324,7 +328,7 @@ nav .navbar-toggle {
 	vertical-align: middle;
 	padding:165px 150px;
 }
-#intro .intro-body H1 {
+#intro .intro-body h1 {
 	border-color: rgb(64, 77, 95);
 	line-height: 60px;
 	font-weight: bold;
@@ -332,10 +336,14 @@ nav .navbar-toggle {
 	opacity: 1;
 	text-shadow: 1px 1;
 	letter-spacing: 1px;
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
-#intro .intro-body H3 {
+#intro .intro-body h3 {
 	font-size: 32px;
 	font-weight: 500;
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
 #intro a{
 	color: #FFFFFF;
