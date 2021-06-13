@@ -1,9 +1,17 @@
-<ul class="pagination">
-    {{#if prev}}
-    <li class="page-item"><a class="page-link" href="{{page_url prev}}">&larr; Newer posts</a></li>
-    {{/if}}
-    <li class="page-item page-link">Page {{page}} of {{pages}} pages</li>
-    {{#if next}}
-    <li class="page-item"><a class="page-link" href="{{page_url next}}">Older posts &rarr;</a></li>
-    {{/if}}
-</ul>
+<nav class="my-4 d-flex justify-content-center">
+    <ul class="pagination">
+        {{#if prev}}
+        <li class="page-item">
+            <a class="page-link" href="{{page_url prev}}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+        </li>
+        {{/if}}
+        <li class="page-item">
+            <a class="page-link" href="#">Page {{page}} of {{pages}}</a>
+        </li>
+        {{#if next}}
+        <li class="page-item">
+            <a class="page-link" href="{{page_url next}}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+        </li>
+        {{/if}}
+    </ul>
+</nav>

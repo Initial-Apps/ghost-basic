@@ -39,9 +39,7 @@ body {
 
 header,
 footer {
-    padding: 15px 25px;
-    background-color: #000;
-    color: #fff;
+    color: inherit;
 }
 .kg-gallery-container {
     display: flex;

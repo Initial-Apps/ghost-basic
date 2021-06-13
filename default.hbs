@@ -49,11 +49,56 @@
     {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
     {{{body}}}
 
-
-    <div class="card">
-        <div class="card-footer text-muted">
-
-            &copy; {{date format="YYYY"}} {{@site.title}}
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="wow fadeInDown animated" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInDown;">
+                        <h2>Contact Us</h2>
+                        <hr>
+                        <br>
+                        <ul>
+                            <li class="pb-2">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i> 
+                                </span>
+                                2362 Sturgis Rd. Unit C, Oxnard, CA 93030
+                            </li>
+                            <li class="pb-2">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                </span> 
+                                    NOEL@3DTEKCNC.COM
+                            </li>
+                            <li class="pb-2">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-phone fa-stack-1x fa-inverse"></i>
+                                </span> 
+                                (805) 588-6559
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="wow fadeInDown animated" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInDown;">
+                        <h2>ISO Compliant</h2>
+                        <hr>
+                        <br>
+                        <!--<img class="iso" src="img/iso.png"/>-->
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </footer>
+    
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col"><p>Copyright &copy; {{date format="YYYY"}} {{@site.title}}</p></div>
+            </div>
         </div>
     </div>
 

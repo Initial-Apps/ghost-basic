@@ -26,7 +26,7 @@ iframe {
 }
 
 ul, ol {
-	list-style: none;
+	margin-left: 2em;
 }
 
 .btn {
@@ -580,6 +580,11 @@ nav .navbar-toggle {
 	color: #666;
 }
 
+#services ul, #services ol {
+	margin-left: 0;
+	list-style: none;
+}
+
 #services h2 {
 	color: #222222;
 }
@@ -685,11 +690,21 @@ nav .navbar-toggle {
 	font-weight: bold;
 }
 
+/* Blog Section */
+#blog {
+	padding: 80px 0;
+	opacity: 1;
+	background-color:#EEE;
+}
+
+#blog a {
+	text-decoration: none;
+}
+
 
 /* Facilities Section */
 #facilities {
 	padding: 40px 0 100px;
-	background-color:#EEE;
 }
 
 #facilities h2 {
@@ -699,6 +714,9 @@ nav .navbar-toggle {
 #facilities h3 {
 	color: #337ab7;
 	margin-bottom:20px;
+}
+#facilities h4 {
+	font-size: 18px;
 }
 
 
@@ -710,6 +728,11 @@ footer {
 
 footer p {
 	margin-bottom: 20px;
+}
+
+footer ul, footer ol {
+	margin-left: 0;
+	list-style: none;
 }
 
 footer h2 {

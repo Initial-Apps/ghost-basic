@@ -1,6 +1,42 @@
 {{!< default}}
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
+<nav class="navbar navbar-custom-sub navbar-expand-lg">
+    <div class="container">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-sub-collapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden"> <a href="#page-top"></a> </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" href="#about">About Us</a> 
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" href="#capabilities">Our Capabilities</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonials">Our Values</a> 
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" href="#services">Our Services</a> 
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" href="/blog">Our Blog</a> 
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" href="#facilities">Our Facilities</a> 
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" href="#contact">Contact Us</a> 
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" href="https://orders.sendcnc.com/3d-tek-cnc/login">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
 <div id="intro">
     <div id="intro-carousel" class="carousel slide" data-bs-ride="carousel">
         <!-- Indicators -->
@@ -448,6 +484,27 @@ into the {body} of the default.hbs template --}}
     </div>
 </div>
 
+{{!-- The main content area --}}
+<div id="blog">
+    <div class="container">
+        <div class="section-title text-center center">
+            <h2>Our Latest Updates</h2>
+            <hr>
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            {{#get "posts" limit="3"}}
+                {{> "posts"}}
+            {{/get}}
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <a href="/blog"><h4 class="pt-5">Read More</h4></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- Facilities Section -->
 <div id="facilities">
     <div class="container">
@@ -461,7 +518,7 @@ into the {body} of the default.hbs template --}}
             </div>
             <div class="col-md-6">
                 <h4>
-                    <span class="fa-stack fa-lg">
+                    <span class="fa-stack">
                         <i class="fa fa-circle fa-stack-2x"></i>
                         <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i> 
                     </span>
@@ -498,14 +555,3 @@ into the {body} of the default.hbs template --}}
         </div>
     </div>
 </div>
-
-{{!-- The main content area --}}
-<main id="site-main">
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            {{> "posts"}}
-        </div>
-
-        {{pagination}}
-    </div>
-</main>
