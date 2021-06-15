@@ -1,7 +1,7 @@
 {
-  "name": "ghost-basic",
+  "name": "3dtek Demo",
   "description": "A custom minimal ghost theme for customization",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "engines": {
     "ghost-api": "v4"
   },
